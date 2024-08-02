@@ -1,0 +1,254 @@
+@font-face {
+    font-family: Bellefair;
+    src: url(font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(/font/Barlow-Regular.ttf);
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Bellefair;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    max-width: 1500px;
+    height: 136px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+.shape {
+    max-width: 560px;
+    width: 100%;
+    height: 1px;
+    margin-left: 12px;
+    opacity: 0.25;
+    background: var(--color-white, #FFF);
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 737px;
+    width: 100%;
+    height: 96px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+}
+
+.sections ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sections li {
+    margin-right: 55px;
+}
+
+.sections li a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.sections li a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 35px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 128px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ph {
+    max-width: 540px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+#so {
+    color: #D0D6F9;
+    letter-spacing: 4px;
+    font-size: 28px;
+}
+
+#space {
+    font-size: 144px;
+    color: #D0D6F9;
+    margin: 24px 0;
+}
+
+#lets {
+    color: #D0D6F9;
+    font-size: 18px;
+    line-height: 180%;
+    font-family: Barlow;
+}
+
+.btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#explore {
+    width: 272px;
+    height: 272px;
+    border: none;
+    border-radius: 50%;
+    font-family: Bellefair;
+    font-size: 32px;
+    color: #0B0D17;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#explore:hover {
+    box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-image: url(/assets/home/background-home-tablet.jpg);
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .container {
+        margin: 64px auto;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ph {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    #space {
+        font-size: 120px;
+    }
+
+    #explore {
+        width: 242px;
+        height: 242px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(/assets/home/background-home-mobile.jpg);
+    }
+
+    .nav {
+        height: auto;
+        padding: 20px;
+        
+    }
+
+    .sections {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 70%;
+        background: rgba(255, 255, 255, 0.05);;
+        backdrop-filter: blur(40px);
+        height: 700px;
+
+    }
+
+    .sections.active {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sections ul {
+        flex-direction: column;
+    }
+
+    .sections li {
+        margin: 20px 0;
+    }
+
+    .sections li a {
+        color: white;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #so {
+        font-size: 20px;
+    }
+
+    #space {
+        font-size: 80px;
+    }
+
+    #lets {
+        font-size: 16px;
+    }
+
+    #explore {
+        width: 200px;
+        height: 200px;
+        font-size: 24px;
+    }
+}

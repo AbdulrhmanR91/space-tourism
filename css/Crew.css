@@ -1,0 +1,286 @@
+@font-face {
+    font-family: Bellefair;
+    src: url(font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(font/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowC;
+    src: url(font/BarlowCondensed-Regular.ttf);
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Bellefair;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    max-width: 1500px;
+    height: 136px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
+.shape {
+    max-width: 560px;
+    width: 100%;
+    height: 1px;
+    margin-left: 12px;
+    opacity: 0.25;
+    background: var(--color-white, #FFF);
+}
+#p1 {
+    position: relative;
+    left: 0px;
+    top: 80px;
+    color: white;
+    font-family: BarlowC;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+span {
+    color: gray;
+    font-weight: bold;
+    letter-spacing: 5px;
+    opacity: 0.7;
+}
+
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 737px;
+    width: 100%;
+    height: 96px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+}
+
+.sections ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sections li {
+    margin-right: 55px;
+}
+
+.sections li a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.sections li a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 35px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.content {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.crew-info {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.Info {
+    max-width: 539px;
+    width: 100%;
+    position: relative;
+    top: 300px;
+}
+
+#nickname {
+    color: white;
+    opacity: 0.50;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#name {
+    color: white;
+    font-family: Bellefair;
+    font-size: 56px;
+    text-transform: uppercase;
+}
+
+#cv {
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    line-height: 180%;
+}
+
+.photo {
+    max-width: 539px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100px;
+}
+
+.crew-slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 200px;
+    position: relative;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0.17;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.dot:hover, .dot.active {
+    opacity: 1;
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        background-image: url("/assets/crew/background-crew-tablet.jpg");
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .nav {
+        padding: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .crew-info {
+        flex-direction: column;
+    }
+
+    .photo {
+        margin-top: 20px;
+    }
+
+    #space {
+        font-size: 120px;
+    }
+
+    #explore {
+        width: 242px;
+        height: 242px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("/assets/crew/background-crew-mobile.jpg");
+    }
+
+    .nav {
+        height: auto;
+        padding: 20px;
+    }
+
+    .sections {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 70%;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(40px);
+        height: auto;
+        padding: 20px;
+    }
+
+    .sections.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sections ul {
+        flex-direction: column;
+    }
+
+    .sections li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .photo {
+        width: 100%;
+        top: 400px;
+    }
+    .crew-slider{
+        top: 400px;
+        right: 100px;
+    }
+
+}

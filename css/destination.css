@@ -1,0 +1,271 @@
+@font-face {
+    font-family: Bellefair;
+    src: url(/font/Bellefair-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(/font/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowC;
+    src: url(/font/BarlowCondensed-Regular.ttf);
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Bellefair;
+}
+
+.container {
+    max-width: 1440px;
+    height: 888px;
+}
+
+#p1 {
+    position: relative;
+    left: 200px;
+    top: 80px;
+    color: white;
+    font-family: BarlowC;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+span {
+    color: gray;
+    font-weight: bold;
+    letter-spacing: 5px;
+    opacity: 0.7;
+}
+
+.planets {
+    max-width: 1110px;
+    width: 100%;
+    height: 734px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content {
+    max-width: 445px;
+    width: 100%;
+    height: 468px;
+    margin: 133px 47px 133px 47px;
+}
+
+#r {
+    margin-right: 30px;
+    position: relative;
+    right: 40px;
+}
+
+#r a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 20px;
+}
+
+#pmoon {
+    align-self: stretch;
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 96px;
+    font-weight: 400;
+    position: relative;
+    bottom: 40px;
+}
+
+#cmoon {
+    align-self: stretch;
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 180%;
+    position: relative;
+    bottom: 125px;
+}
+
+.space {
+    max-width: 445px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.25;
+    position: relative;
+    bottom: 115px;
+}
+
+#avg {
+    font-family: BarlowC;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #D0D6F9;
+    position: relative;
+    bottom: 100px;
+}
+
+#value1 {
+    color: white;
+    font-family: Bellefair;
+    font-size: 28px;
+    position: relative;
+    bottom: 120px;
+}
+
+.distance {
+    display: inline-block;
+}
+
+.time {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+#time {
+    font-family: BarlowC;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #D0D6F9;
+    position: relative;
+    bottom: 100px;
+}
+
+#value2 {
+    color: white;
+    font-family: Bellefair;
+    font-size: 28px;
+    position: relative;
+    bottom: 120px;
+}
+
+.nav {
+    max-width: 1500px;
+    height: 136px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px; 
+    position: relative;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
+.shape {
+    max-width: 560px;
+    width: 100%;
+    height: 1px;
+    margin-left: 12px;
+    opacity: 0.25;
+    background: var(--color-white, #FFF);
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 737px;
+    width: 100%;
+    height: 96px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+}
+
+li {
+    display: inline;
+    margin-right: 55px;
+}
+
+li a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+li a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 35px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("/assets/destination/background-destination-mobile.jpg");
+    }
+
+    .nav {
+        height: auto;
+        padding: 20px;
+    }
+
+    .sections {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(40px);
+        height: 300px;
+        padding: 20px;
+    }
+
+    .sections.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sections ul {
+        flex-direction: column;
+    }
+
+    .sections li {
+        margin-left: 700px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    #p1{
+        position: relative;
+        left:0px;
+    }
+    .shape{
+        background-color: transparent;
+    }
+}
